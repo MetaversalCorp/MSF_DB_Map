@@ -72,8 +72,8 @@ BEGIN
          ALTER DATABASE [{MSF_Map}] SET DB_CHAINING                   ON
          
          ALTER AUTHORIZATION ON DATABASE::[{MSF_Map}] TO sa
-		 End
-         GO
+  END
+GO
 
 USE [{MSF_Map}]
 GO

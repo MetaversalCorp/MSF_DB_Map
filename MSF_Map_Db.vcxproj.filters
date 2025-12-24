@@ -1372,5 +1372,8 @@
     <None Include="SQL Server\Tables\Version.sql">
       <Filter>MS SQL\Tables</Filter>
     </None>
+    <None Include="MySQL\_Create\Create.sh">
+      <Filter>MySQL\_Create</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -18,7 +18,31 @@
 
 /******************************************************************************************************************************/
 
--- Rename [{MSF_Map}] to new database name
+-- PREREQUISITE --
+
+-- If you don't already have a login on your server that you want to use for this database, you can create one
+--    using one of these methods:
+
+--    CREATE LOGIN [{Login_Name}] WITH PASSWORD = '[{Login_Password}]'
+--    CREATE LOGIN [{Login_Name}] FROM WINDOWS
+
+-- When you're creating logins that are mapped from a Windows domain account, you must use the logon name in the 
+-- format [<domainName>\<login_name>]. Therefore, you would rename as follows, retaining the square brackets:
+--
+--    [{Login_Name}] -> [<domainName>\<login_name>]
+
+-- For more information on creating logins:
+--
+--    https://learn.microsoft.com/en-us/sql/t-sql/statements/create-login-transact-sql?view=sql-server-ver17
+
+/******************************************************************************************************************************/
+
+-- REQUIRED BEFORE RUNNING THIS SCRIPT --
+
+-- 1. Rename [{MSF_Map}]    to your new database name
+-- 2. Rename [{Login_Name}] to your server's login (see above) that will be granted execute access to this database
+
+/******************************************************************************************************************************/
 
 USE master
 GO
@@ -78,13 +102,8 @@ GO
 USE [{MSF_Map}]
 GO
 
-/*
-CREATE USER MapService FOR LOGIN [<your_domain>\MapService] WITH DEFAULT_SCHEMA = dbo
+CREATE USER WebService FOR LOGIN [{Login_Name}] WITH DEFAULT_SCHEMA = dbo
 GO
-
-GRANT EXECUTE TO [<your_domain>\MapService];
-GO
-*/
 
 /******************************************************************************************************************************/
 

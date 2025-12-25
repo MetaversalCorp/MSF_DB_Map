@@ -253,4 +253,9 @@ GO
 GRANT EXECUTE ON dbo.set_RMTObject_Fabric_Open TO WebService
 GO
 
+
+-- this procedure shouldn't always be added tothe database, but there's no way to only add it based on a condition
+DROP PROCEDURE dbo.set_RMTObject_Fabric_Open
+GO
+
 /******************************************************************************************************************************/

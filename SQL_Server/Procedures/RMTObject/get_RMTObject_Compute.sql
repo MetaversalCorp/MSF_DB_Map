@@ -18,25 +18,22 @@
 
 /******************************************************************************************************************************/
 
-/*
-    -- These tables need to be empty for object 999999999 when executing this stored procedure
+-- These tables need to be empty for object 999999999 when executing this stored procedure
 
-SELECT * FROM dbo.RMTMatrix     WHERE bnMatrix      = 999999999
-SELECT * FROM dbo.RMTSubsurface WHERE twRMTObjectIx = 999999999
-GO
+-- SELECT * FROM dbo.RMTMatrix     WHERE bnMatrix      = 999999999
+-- SELECT * FROM dbo.RMTSubsurface WHERE twRMTObjectIx = 999999999
+-- GO
 
-    -- This temporary table must exist when executing this stored procedure
-    -- Populate this table with all nodes that fall within the geographic region of the subsurface being created 
-       prior to executing this stored procedure
+-- This temporary table must exist when executing this stored procedure
+-- Populate this table with all nodes that fall within the geographic region of the subsurface being created 
+-- prior to executing this stored procedure
 
-CREATE TABLE #Node
-(
-   fLatitude                     FLOAT (53),
-   fLongitude                    FLOAT (53)
-)
-GO
-
-*/
+-- CREATE TABLE #Node
+-- (
+--    fLatitude                     FLOAT (53),
+--    fLongitude                    FLOAT (53)
+-- )
+-- GO
 
 /******************************************************************************************************************************/
 
